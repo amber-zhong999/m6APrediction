@@ -30,5 +30,5 @@ ml_fit <- readRDS(system.file("extdata", "rf_fit.rds",
 example_df <- read.csv(system.file("extdata",
                                    "m6A_input_example.csv",
                                    package = "m6APrediction"))
-prediction_multiple(ml_fit, example_df, positive_threshold = 0.6)
+head(prediction_multiple(ml_fit, example_df, positive_threshold = 0.6))
 }

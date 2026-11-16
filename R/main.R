@@ -31,7 +31,7 @@ dna_encoding <- function(dna_strings){
 #' example_df <- read.csv(system.file("extdata",
 #'                                    "m6A_input_example.csv",
 #'                                    package = "m6APrediction"))
-#' prediction_multiple(ml_fit, example_df, positive_threshold = 0.6)
+#' head(prediction_multiple(ml_fit, example_df, positive_threshold = 0.6))
 #' @export
 #' @import randomForest
 #' @importFrom stats predict
