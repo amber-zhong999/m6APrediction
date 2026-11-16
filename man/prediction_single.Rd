@@ -21,9 +21,11 @@ prediction_single(
 
 \item{gc_content}{A numeric value representing GC content.}
 
-\item{RNA_type}{A character string specifying the RNA type.}
+\item{RNA_type}{A character string specifying the RNA type:
+"mRNA", "lincRNA", "lncRNA", or "pseudogene".}
 
-\item{RNA_region}{A character string specifying the RNA region.}
+\item{RNA_region}{A character string specifying the RNA region:
+"CDS", "intron", "3'UTR", or "5'UTR".}
 
 \item{exon_length}{A numeric value representing exon length.}
 

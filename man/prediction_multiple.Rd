@@ -9,8 +9,9 @@ prediction_multiple(ml_fit, feature_df, positive_threshold = 0.5)
 \arguments{
 \item{ml_fit}{A trained random forest model.}
 
-\item{feature_df}{A data frame containing the required input
-features for m6A prediction.}
+\item{feature_df}{A data frame containing seven required columns:
+gc_content, RNA_type, RNA_region, exon_length,
+distance_to_junction, evolutionary_conservation, and DNA_5mer.}
 
 \item{positive_threshold}{A numeric threshold for classifying
 samples as Positive or Negative. Default is 0.5.}

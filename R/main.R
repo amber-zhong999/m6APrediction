@@ -18,8 +18,9 @@ dna_encoding <- function(dna_strings){
 #' @description Predict m6A probabilities and statuses for multiple
 #' samples using a trained random forest model.
 #' @param ml_fit A trained random forest model.
-#' @param feature_df A data frame containing the required input
-#' features for m6A prediction.
+#' @param feature_df A data frame containing seven required columns:
+#'   gc_content, RNA_type, RNA_region, exon_length,
+#'   distance_to_junction, evolutionary_conservation, and DNA_5mer.
 #' @param positive_threshold A numeric threshold for classifying
 #' samples as Positive or Negative. Default is 0.5.
 #' @return A data frame containing the original features and two
@@ -53,8 +54,10 @@ prediction_multiple <- function(ml_fit, feature_df, positive_threshold = 0.5){
 #' sample using a trained random forest model.
 #' @param ml_fit A trained random forest model.
 #' @param gc_content A numeric value representing GC content.
-#' @param RNA_type A character string specifying the RNA type.
-#' @param RNA_region A character string specifying the RNA region.
+#' @param RNA_type A character string specifying the RNA type:
+#'   "mRNA", "lincRNA", "lncRNA", or "pseudogene".
+#' @param RNA_region A character string specifying the RNA region:
+#'   "CDS", "intron", "3'UTR", or "5'UTR".
 #' @param exon_length A numeric value representing exon length.
 #' @param distance_to_junction A numeric distance to a junction.
 #' @param evolutionary_conservation A numeric conservation score.
