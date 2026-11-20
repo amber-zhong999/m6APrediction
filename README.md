@@ -22,15 +22,15 @@ Both prediction functions return a probability and classify candidate sites as P
 
 The prediction model uses the following features:
 
-| Feature                   | Description                                     |
-|---------------------------|-------------------------------------------------|
-| gc_content                | GC content of the sequence                      |
-| RNA_type                  | RNA type, such as mRNA or lncRNA                |
-| RNA_region                | RNA region, such as CDS, intron, 3'UTR or 5'UTR |
-| exon_length               | Exon length                                     |
-| distance_to_junction      | Distance to a splice junction                   |
-| evolutionary_conservation | Evolutionary conservation score                 |
-| DNA_5mer                  | Five-nucleotide DNA sequence context            |
+| Feature | Description |
+|--------------------------|----------------------------------------------|
+| gc_content | GC content of the sequence |
+| RNA_type | RNA type, such as mRNA or lncRNA |
+| RNA_region | RNA region, such as CDS, intron, 3'UTR or 5'UTR |
+| exon_length | Log2-transformed exon length |
+| distance_to_junction | Log2-transformed distance to the splice junction |
+| evolutionary_conservation | Evolutionary conservation score |
+| DNA_5mer | Five-nucleotide DNA sequence context |
 
 ## Installation
 
@@ -45,6 +45,15 @@ After installation, load the package:
 
 ``` r
 library(m6APrediction)
+```
+
+### Troubleshooting
+
+If the installation fails due to a slow network connection or download timeout, try increasing the timeout:
+
+```         
+options(timeout = 600)
+remotes::install_github("amber-zhong999/m6APrediction")
 ```
 
 ## Usage Examples

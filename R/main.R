@@ -58,8 +58,8 @@ prediction_multiple <- function(ml_fit, feature_df, positive_threshold = 0.5){
 #'   "mRNA", "lincRNA", "lncRNA", or "pseudogene".
 #' @param RNA_region A character string specifying the RNA region:
 #'   "CDS", "intron", "3'UTR", or "5'UTR".
-#' @param exon_length A numeric value representing exon length.
-#' @param distance_to_junction A numeric distance to a junction.
+#' @param exon_length A numeric value representing the log2-transformed exon length.
+#' @param distance_to_junction A numeric value representing the log2-transformed distance to the splice junction.
 #' @param evolutionary_conservation A numeric conservation score.
 #' @param DNA_5mer A character string representing a DNA 5-mer.
 #' @param positive_threshold A numeric threshold for classification.

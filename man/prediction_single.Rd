@@ -27,9 +27,9 @@ prediction_single(
 \item{RNA_region}{A character string specifying the RNA region:
 "CDS", "intron", "3'UTR", or "5'UTR".}
 
-\item{exon_length}{A numeric value representing exon length.}
+\item{exon_length}{A numeric value representing the log2-transformed exon length.}
 
-\item{distance_to_junction}{A numeric distance to a junction.}
+\item{distance_to_junction}{A numeric value representing the log2-transformed distance to the splice junction.}
 
 \item{evolutionary_conservation}{A numeric conservation score.}
 
